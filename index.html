@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Bài 1: Quản lý tuyển sinh</h3>
+        <div class="row py-3">
+            <div class="col-4">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="" id="diemChuan" placeholder="Điểm chuẩn">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <select class="form-control" id="khuVuc">
+                        <option>Chọn khu vực</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <select class="form-control" id="doiTuong">
+                        <option>Chọn đối tượng</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="" id="diemMonThu1" placeholder="Điểm môn thứ 1">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="" id="diemMonThu2" placeholder="Điểm môn thứ 2">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="" id="diemMonThu3" placeholder="Điểm môn thứ 3">
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" id="btnKetQua">Kết Quả</button>
+        <div class="ketqua">
+            <i class="fa fa-hand-point-right"></i> <span id="ketQua"></span>
+        </div>
+        <br><br><br>
+        <hr>
+        <br><br><br>
+
+
+
+        <h3>Bài 2: Tính tiền điện</h3>
+        <div class="row py-3">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="text" class="form-control" name="" id="hoTen" placeholder="Nhập họ tên">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="number" class="form-control" name="" id="soKw" placeholder="Nhập số Kw">
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" id="btnTinhTienDien">Tính tiền điện</button>
+        <div class="ketqua">
+            <i class="fa fa-hand-point-right"></i> <span id="ketQuaBai2"></span>
+        </div>
+        <br><br><br>
+        <hr>
+        <br><br><br>
+
+
+
+        <h3>Bài 3: Tính thuế thu nhập cá nhân</h3>
+        <div class="row py-3">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="text" class="form-control" name="" id="hoVaTen" placeholder="Nhập họ tên">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="number" class="form-control" name="" id="thuNhapNam" placeholder="Tổng thu nhập năm">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="number" class="form-control" name="" id="soNguoiPhuThuoc"
+                        placeholder="Số người phụ thuộc">
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" id="btnTinhTienThue">Tính tiền thuế</button>
+        <div class="ketqua">
+            <i class="fa fa-hand-point-right"></i> <span id="ketQuaBai3"></span>
+        </div>
+        <br><br><br>
+        <hr>
+        <br><br><br>
+
+        <h3>Bài 4: tính tiền cáp</h3>
+        <div class="row py-3">
+            <div class="col-4">
+                <div class="form-group">
+                    <select id="mySelect" class="form-control" onchange="myFunction()">
+                        <option value="">Chọn loại khách hàng</option>
+                        <option id="nhaDan">Nhà Dân</option>
+                        <option id="doanhNghiep">Doanh Nghiệp</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="" id="maKhachHang" placeholder="Nhập mã khách hàng">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="" id="soKenhCaoCap" placeholder="Số kênh cao cấp">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="" id="soKetNoi" placeholder="Số kết nối">
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <button class="btn btn-primary" id="btnTinhTienCap">Tính tiền cáp</button>
+        <div class="ketqua">
+            <i class="fa fa-hand-point-right"></i> <span id="ketQuaBai4"></span>
+        </div>
+        <br><br><br>
+
+
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

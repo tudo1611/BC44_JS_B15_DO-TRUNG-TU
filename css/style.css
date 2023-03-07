@@ -1,0 +1,19 @@
+.btn {
+  border-radius: 30px;
+  padding: 10px 30px;
+}
+.ketqua {
+  margin-top: 2rem;
+  border: 1px solid #ced4da;
+  background-color: #d1e7dd;
+}
+.ketqua i {
+  padding: 20px;
+  color: orange;
+}
+.form-control {
+  border-radius: 10px;
+}
+.ketqua {
+  border-radius: 10px;
+}
